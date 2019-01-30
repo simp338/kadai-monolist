@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @items = @user.items.uniq
     @user_want = @user.want_items.count
+    @user_have = @user.have_items.count
   end
 
   def new
